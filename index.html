@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutomatePro - RPA Solutions for Business</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">AutomatePro</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#calculator">ROI Calculator</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="bot.html" class="chatbot-nav-link"><i class="fas fa-robot"></i> Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="background-image: url('banner.jpg');">
+        <div class="container">
+            <h1>Transform Your Business with Robotic Process Automation</h1>
+            <p>Automate repetitive tasks, reduce costs, and boost efficiency with our enterprise-grade RPA solutions.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our RPA Services</h2>
+            <p class="section-subtitle">Comprehensive automation solutions tailored to your business needs</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="img (2).jpg" alt="Process Automation" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Process Automation</h3>
+                        <p>Automate repetitive back-office tasks to free up your team for higher-value work.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="img (3).jpg" alt="Data Integration" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Data Integration</h3>
+                        <p>Seamlessly connect disparate systems without expensive custom development.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="img (4).jpg" alt="AI-Enhanced RPA" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>AI-Enhanced RPA</h3>
+                        <p>Combine RPA with AI for intelligent document processing and decision-making.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>RPA Cost Savings Calculator</h2>
+            <p class="section-subtitle">See how much your business could save with automation</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <div class="calc-image-container">
+                        <img src="img (5).jpg" alt="RPA Calculation" class="calc-image" loading="lazy">
+                    </div>
+                    <div class="input-group">
+                        <label for="employees">Number of Employees:</label>
+                        <input type="range" id="employees" min="50" max="1000" value="200" step="10">
+                        <div class="input-value" id="employees-value">200</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="process-hours">Monthly Process Hours:</label>
+                        <input type="range" id="process-hours" min="100" max="5000" value="1000" step="50">
+                        <div class="input-value" id="process-hours-value">1,000</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="hourly-rate">Average Hourly Rate ($):</label>
+                        <input type="range" id="hourly-rate" min="15" max="100" value="25" step="5">
+                        <div class="input-value" id="hourly-rate-value">25</div>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="chart-container">
+                        <canvas id="savings-chart"></canvas>
+                    </div>
+                    
+                    <div class="savings-table-container">
+                        <div class="table-scroll">
+                            <table class="savings-table">
+                                <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Manual Cost</th>
+                                        <th>RPA Cost</th>
+                                        <th>Savings</th>
+                                        <th>Cumulative Savings</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="savings-data">
+                                    <!-- Filled by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to Automate Your Business?</h2>
+            <p class="section-subtitle">Fill out the form below and our RPA experts will contact you with a customized solution.</p>
+            
+            <div class="contact-container">
+                <div class="contact-image">
+                    <img src="img (6).jpg" alt="Contact Our RPA Experts" loading="lazy">
+                </div>
+                <div class="contact-form">
+                    <form id="lead-form" class="lead-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name*</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Business Email*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="employees-range">Company Size</label>
+                            <select id="employees-range" name="employees-range">
+                                <option value="1-50">1-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-500">201-500 employees</option>
+                                <option value="501-1000">501-1000 employees</option>
+                                <option value="1000+">1000+ employees</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">What processes would you like to automate?</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="submit-button">Request Consultation</button>
+                        
+                        <div id="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: linear-gradient(rgba(52, 152, 219, 0.9), rgba(155, 89, 182, 0.9)), url('img (7).jpg');">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img (8).jpg" alt="AutomatePro Logo" class="footer-logo" loading="lazy">
+                    <div class="footer-brand-name">AutomatePro</div>
+                </div>
+                <div class="footer-copyright">© 2025 AutomatePro. All rights reserved.<br>Powered by Innovative RPA Solutions</div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="index.html#contact">Contact Us</a>
+                    <a href="bot.html">Chat Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="chatbot-toggle" onclick="window.location.href='bot.html'">
+        <i class="fas fa-robot"></i>
+    </button>
+</body>
+</html>
